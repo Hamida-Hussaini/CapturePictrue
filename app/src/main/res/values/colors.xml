@@ -6,4 +6,6 @@
     <color name="white">#FCFFFF</color>
     <color name="black">#090909</color>
     <color name="lightBlue">#5F67F4</color>
+    <color name="navText">#4A6572</color>
+    <color name="navHighLight">#253840</color>
 </resources>
