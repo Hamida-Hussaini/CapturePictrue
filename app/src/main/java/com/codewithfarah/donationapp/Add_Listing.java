@@ -37,6 +37,7 @@ public class Add_Listing extends AppCompatActivity {
 
         btnCaptureImage=(Button) findViewById(R.id.btn_captureImage);
         imageDisplay=(ImageView) findViewById(R.id.imageCapture);
+        btnPick = findViewById(R.id.btnPickImage);
 
 
 
@@ -50,8 +51,15 @@ public class Add_Listing extends AppCompatActivity {
             }
         });
 
-        imageDisplay =findViewById(R.id.imageCapture);
-        btnPick = findViewById(R.id.btnPickImage);
+        imageDisplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent,0);
+
+            }
+        });
 
         btnPick.setOnClickListener(
                 new View.OnClickListener() {
